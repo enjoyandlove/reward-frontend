@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+@font-face {
+  font-family: "MandatoryPlaything";
+  src: local("MandatoryPlaything"),
+    url("./assets/fonts/Mandatory.Plaything.otf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat"),
+    url("./assets/fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+}
+
+.background {
+  background-image: url("./assets/background.png");
+}
+.main-bg {
+  background-image: url("./assets/main-bg.png");
+  background-size: cover;
+}
+.round-rec {
+  background-image: linear-gradient(0deg, #db1f05 0%, #f7b305 100%);
+}
+.bigpad {
+  background-image: linear-gradient(0deg, #111111 0%, #444444 50%, #111111 100%);
+}
