@@ -4,11 +4,11 @@ import financelogo from '../../assets/finance-logo.png';
 const Footer = () => {
     return (
         <>
-            <div className='flex justify-between items-center relative h-[90px] border-t border-white-6 border-solid px-10'>
+            <div className='flex justify-between items-center relative md:h-[90px] border-t border-white-6 border-solid px-5 md:px-10 py-5 md:py-0 flex-col md:flex-row'>
                 <div>
                     <img src={financelogo} alt='finance logo' />
                 </div>
-                <div className='flex text-white-2 font-bold font-montserrat text-4'>
+                <div className='flex text-white-2 font-bold font-montserrat text-4 py-5 md:py-0'>
                     <p className='border-r border-solid border-white-6 pr-4'>For projects</p>
                     <p className='pl-4 '>For service providers</p>
                 </div>

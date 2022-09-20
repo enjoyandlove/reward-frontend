@@ -15,7 +15,7 @@ const RewardCard = (props) => {
 
     return (
         <>
-            <div className='flex items-center py-3 h-[120px] bg-dark-main border-2 border-solid border-white-3 pr-5'>
+            <div className='flex items-center py-3 h-[120px] bg-dark-main border-2 border-solid border-white-3 pr-5 hover-item'>
                 <div className='px-5'>
                     {image == 'reward1' && <img src={reward1} alt='reward' />}
                     {image == 'reward2' && <img src={reward2} alt='reward' />}
@@ -28,7 +28,7 @@ const RewardCard = (props) => {
                 </div>
                 <div>
                     <p className='text-6 text-white-2 leading-2 font-montserrat'>{compensation}</p>
-                    <p className='text-8 text-white-main leading-2 font-montserrat'>{title}</p>
+                    <p className='text-8 font-bold text-white-main leading-2 font-montserrat'>{title}</p>
                 </div>
             </div>
         </>

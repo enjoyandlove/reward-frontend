@@ -15,7 +15,7 @@ const DvoucherCard = (props) => {
         <>
             <div>
                 {image == 'dvoucher1' &&
-                    <div>
+                    <div className='typeOfV bronze'>
                         <div className='flex py-4 pr-12 mb-2 h-[120px] items-center border-2 border-solid border-white-3'>
                             <div className='px-4 relative'>
                                 <div><img src={dvoucher1} alt='dvoucher' /></div>
@@ -27,7 +27,7 @@ const DvoucherCard = (props) => {
                     </div>
                 }
                 {image == 'dvoucher2' &&
-                    <div>
+                    <div className='typeOfV silver'>
                         <div className='flex py-4 pr-12 mb-2 h-[120px] items-center border-2 border-solid border-white-3'>
                             <div className='px-4 relative'>
                                 <div><img src={dvoucher2} alt='dvoucher' /></div>
@@ -39,7 +39,7 @@ const DvoucherCard = (props) => {
                     </div>
                 }
                 {image == 'dvoucher3' &&
-                    <div>
+                    <div className='typeOfV gold'>
                         <div className='flex py-4 pr-12 mb-2 h-[120px] items-center border-2 border-solid border-white-3'>
                             <div className='px-4 relative'>
                                 <div><img src={dvoucher3} alt='dvoucher' /></div>
@@ -51,7 +51,7 @@ const DvoucherCard = (props) => {
                     </div>
                 }
                 {image == 'dvoucher4' &&
-                    <div>
+                    <div className='typeOfV platinum'>
                         <div className='flex py-4 pr-12 mb-2 h-[120px] items-center border-2 border-solid border-white-3'>
                             <div className='px-4 relative'>
                                 <div><img src={dvoucher4} alt='dvoucher' /></div>
