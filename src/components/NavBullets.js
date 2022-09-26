@@ -7,7 +7,7 @@ const NavBullets = () => {
         <>
             <Bullets>
                 <a href="#"><span>Personal rewards</span></a>
-                <a href="#"><span>Personal rewards</span></a>
+                <a href="#"><span>Group rewards</span></a>
                 <a href="#"><span>Personal rewards</span></a>
                 <a href="#"><span>Personal rewards</span></a>
                 <a href="#"><span>Personal rewards</span></a>
