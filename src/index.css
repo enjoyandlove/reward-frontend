@@ -30,6 +30,9 @@ code {
   font-weight: normal;
 }
 
+a {
+  cursor: pointer;
+}
 .background {
   background-image: url("./assets/background.png");
 }

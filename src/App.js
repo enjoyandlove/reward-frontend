@@ -9,7 +9,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Main />} />
-        <Route path='/rewards' element={<RewardsMain />}></Route>
+        <Route path='/rewards/*' element={<RewardsMain />}></Route>
         <Route></Route>
       </Routes>
     </BrowserRouter>

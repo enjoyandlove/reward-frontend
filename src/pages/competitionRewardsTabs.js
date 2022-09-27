@@ -6,10 +6,9 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
 
 // Images
-import iframe1 from './../assets/iframe1.jpg'
-import iframe2 from './../assets/iframe2.jpg'
-import iframe3 from './../assets/iframe3.jpg'
-import Smlogin from './../assets/sm.jpg'
+import Reward1 from './../assets/1reward.png'
+import Reward2 from './../assets/2reward.png'
+import Reward3 from './../assets/3reward.png'
 
 
 
@@ -44,55 +43,398 @@ export default class CompetitionRewardsTabs extends PureComponent {
                                         <p className='text-white-2 text-8 mt-7 leading-8'>The personal trading reward is an unlimited dVoucher program, allowing users to earn by utilizing the technology often. As a trader you compete against yourself from the previous month. If you trade more than the previous month, the percentage increase determines your booster. For example, for a 50% increase you end up with 1.5%.</p>
                                         <p className='text-white-2 text-8 mt-7 leading-8'>Cap percentage is set at a 100% booster or 2%.</p>
                                     </div>
-                                    <IFrameCol><img src={iframe1}></img>
-                                        <button className="btn-golden w-[660px] h-[80px] mt-6 bg-yellow-main border-2 border-solid bg-opacity-0 text-white-1 font-bold text-xl uppercase">
-                                        <FontAwesomeIcon icon={faLock} className='mr-2' /> Unlock 3 More Entries
-                                        <span className="text-xs block normal-case	">Complete the above entries to unlock the rest!</span>
-                                        </button>
-                                    </IFrameCol>
+                                    <div className="max-w-4xl mt-14 mx-auto">
+                                        <div className="flex items-center mb-6">
+                                            <span className="text-2xl text-white-main font-bold">Top 100 Winners</span>
+                                            <a href="#" className="btn-golden inline-flex items-center justify-center w-[198px] h-[48px] bg-yellow-main border-2 border-solid bg-opacity-0 text-white-1 font-bold text-sm uppercase ml-auto">Check if you won</a>
+                                        </div>
+                                        <Table>
+                                            <thead>
+                                                <tr>
+                                                    <Thd className="w-[10%]"></Thd>
+                                                    <Thd className="text-left">Wallet address</Thd>
+                                                    <Thd className="text-left">dVoucher</Thd>
+                                                    <Thd className="text-center w-[20%]">Claim</Thd>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <Tcell><img src={Reward1}></img></Tcell>
+                                                    <Tcell className="txt-blue">0x084.....6a80</Tcell>
+                                                    <Tcell>1,000,000</Tcell>
+                                                    <Tcell></Tcell>
+                                                </tr>
+                                                <tr>
+                                                    <Tcell><img src={Reward2}></img></Tcell>
+                                                    <Tcell className="txt-blue">0x084.....6a80</Tcell>
+                                                    <Tcell>900,000</Tcell>
+                                                    <Tcell><a href="#" className="btn-golden inline-flex items-center justify-center w-[246px] h-[34px] bg-yellow-main border-2 border-solid bg-opacity-0 text-white-1 font-bold text-sm uppercase">Claim</a></Tcell>
+                                                </tr>
+                                                <tr>
+                                                    <Tcell><img src={Reward3}></img></Tcell>
+                                                    <Tcell className="txt-blue">0x084.....6a80</Tcell>
+                                                    <Tcell>800,000</Tcell>
+                                                    <Tcell></Tcell>
+                                                </tr>
+                                                <tr>
+                                                    <Tcell>4</Tcell>
+                                                    <Tcell className="txt-blue">0x084.....6a80</Tcell>
+                                                    <Tcell>700,000</Tcell>
+                                                    <Tcell></Tcell>
+                                                </tr>
+                                                <tr>
+                                                    <Tcell>5</Tcell>
+                                                    <Tcell className="txt-blue">0x084.....6a80</Tcell>
+                                                    <Tcell>600,000</Tcell>
+                                                    <Tcell></Tcell>
+                                                </tr>
+                                                <tr>
+                                                    <Tcell>6</Tcell>
+                                                    <Tcell className="txt-blue">0x084.....6a80</Tcell>
+                                                    <Tcell>500,000</Tcell>
+                                                    <Tcell></Tcell>
+                                                </tr>
+                                                <tr>
+                                                    <Tcell>7</Tcell>
+                                                    <Tcell className="txt-blue">0x084.....6a80</Tcell>
+                                                    <Tcell>400,000</Tcell>
+                                                    <Tcell></Tcell>
+                                                </tr>
+                                                <tr>
+                                                    <Tcell>8</Tcell>
+                                                    <Tcell className="txt-blue">0x084.....6a80</Tcell>
+                                                    <Tcell>300,000</Tcell>
+                                                    <Tcell></Tcell>
+                                                </tr>
+                                                <tr>
+                                                    <Tcell>9</Tcell>
+                                                    <Tcell className="txt-blue">0x084.....6a80</Tcell>
+                                                    <Tcell>200,000</Tcell>
+                                                    <Tcell></Tcell>
+                                                </tr>
+                                                <tr>
+                                                    <Tcell>10</Tcell>
+                                                    <Tcell className="txt-blue">0x084.....6a80</Tcell>
+                                                    <Tcell>100,000</Tcell>
+                                                    <Tcell></Tcell>
+                                                </tr>
+                                            </tbody>
+                                        </Table>
+                                        <Tfooter>
+                                            <div>Page 
+                                                <SelectCustom>
+                                                    <select>
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                        <option>4</option>
+                                                    </select>
+                                                </SelectCustom>
+                                                result 1-10 of 300</div>   
+                                        </Tfooter>
+                                    </div>
                                 </div>
                             </StepSec>
                         </TabPanel>
                         <TabPanel>
-                        <StepSec>
-                            <div className="">
-                            <div className="flex items-center">
-                                <span className="font-play w-[56px] h-[56px] border-2 border-solid inline-flex text-white justify-center items-center text-3xl text-white-main">2</span>
-                                <h2 className="font-play text-white-main text-9 md:text-3xl ml-8">Multiple tasks</h2>
-                            </div>
-                            <p  className="text-white-2 text-8 mt-7 leading-8">Engaging with Qonetum Foundation social posts needs to be consistent in order to achieve long-term organic growth. Therefore, users are eligible for dVoucher by engaging consistently with Qonetum. </p>
-                            <IFrameCol>
-                                <img src={iframe2}></img>
-                            </IFrameCol>
-                            </div>
-                        </StepSec>
+                            <StepSec>
+                                <div className="">
+                                    <div className='font-play text-white-main text-9 md:text-1 text-center'>Personal Staking competition</div>
+                                    <div className='text-center font-montserrat mt-2'>
+                                        <p className='text-white-2 text-8 mt-7 leading-8'>The personal staking reward is an unlimited dVoucher program, allowing users to earn by utilizing the technology often. As a trader you compete against yourself from the previous month. If you trade more than the previous month, the percentage increase determines your booster. For example, for a 50% increase you end up with 1.5%.</p>
+                                        <p className='text-white-2 text-8 mt-7 leading-8'>Cap percentage is set at a 100% booster or 2%.</p>
+                                    </div>
+                                    <div className="max-w-4xl mt-14 mx-auto">
+                                        <div className="flex items-center mb-6">
+                                            <span className="text-2xl text-white-main font-bold">Top 100 Winners</span>
+                                            <a href="#" className="btn-golden inline-flex items-center justify-center w-[198px] h-[48px] bg-yellow-main border-2 border-solid bg-opacity-0 text-white-1 font-bold text-sm uppercase ml-auto">Check if you won</a>
+                                        </div>
+                                        <Table>
+                                            <thead>
+                                                <tr>
+                                                    <Thd className="w-[10%]"></Thd>
+                                                    <Thd className="text-left">Wallet address</Thd>
+                                                    <Thd className="text-left">dVoucher</Thd>
+                                                    <Thd className="text-center w-[20%]">Claim</Thd>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <Tcell><img src={Reward1}></img></Tcell>
+                                                    <Tcell className="txt-blue">0x084.....6a80</Tcell>
+                                                    <Tcell>1,000,000</Tcell>
+                                                    <Tcell></Tcell>
+                                                </tr>
+                                                <tr>
+                                                    <Tcell><img src={Reward2}></img></Tcell>
+                                                    <Tcell className="txt-blue">0x084.....6a80</Tcell>
+                                                    <Tcell>900,000</Tcell>
+                                                    <Tcell><a href="#" className="btn-golden inline-flex items-center justify-center w-[246px] h-[34px] bg-yellow-main border-2 border-solid bg-opacity-0 text-white-1 font-bold text-sm uppercase">Claim</a></Tcell>
+                                                </tr>
+                                                <tr>
+                                                    <Tcell><img src={Reward3}></img></Tcell>
+                                                    <Tcell className="txt-blue">0x084.....6a80</Tcell>
+                                                    <Tcell>800,000</Tcell>
+                                                    <Tcell></Tcell>
+                                                </tr>
+                                                <tr>
+                                                    <Tcell>4</Tcell>
+                                                    <Tcell className="txt-blue">0x084.....6a80</Tcell>
+                                                    <Tcell>700,000</Tcell>
+                                                    <Tcell></Tcell>
+                                                </tr>
+                                                <tr>
+                                                    <Tcell>5</Tcell>
+                                                    <Tcell className="txt-blue">0x084.....6a80</Tcell>
+                                                    <Tcell>600,000</Tcell>
+                                                    <Tcell></Tcell>
+                                                </tr>
+                                                <tr>
+                                                    <Tcell>6</Tcell>
+                                                    <Tcell className="txt-blue">0x084.....6a80</Tcell>
+                                                    <Tcell>500,000</Tcell>
+                                                    <Tcell></Tcell>
+                                                </tr>
+                                                <tr>
+                                                    <Tcell>7</Tcell>
+                                                    <Tcell className="txt-blue">0x084.....6a80</Tcell>
+                                                    <Tcell>400,000</Tcell>
+                                                    <Tcell></Tcell>
+                                                </tr>
+                                                <tr>
+                                                    <Tcell>8</Tcell>
+                                                    <Tcell className="txt-blue">0x084.....6a80</Tcell>
+                                                    <Tcell>300,000</Tcell>
+                                                    <Tcell></Tcell>
+                                                </tr>
+                                                <tr>
+                                                    <Tcell>9</Tcell>
+                                                    <Tcell className="txt-blue">0x084.....6a80</Tcell>
+                                                    <Tcell>200,000</Tcell>
+                                                    <Tcell></Tcell>
+                                                </tr>
+                                                <tr>
+                                                    <Tcell>10</Tcell>
+                                                    <Tcell className="txt-blue">0x084.....6a80</Tcell>
+                                                    <Tcell>100,000</Tcell>
+                                                    <Tcell></Tcell>
+                                                </tr>
+                                            </tbody>
+                                        </Table>
+                                        <Tfooter>
+                                            <div>Page 
+                                                <SelectCustom>
+                                                    <select>
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                        <option>4</option>
+                                                    </select>
+                                                </SelectCustom>
+                                                result 1-10 of 300</div>   
+                                        </Tfooter>
+                                    </div>
+                                </div>
+                            </StepSec>
                         </TabPanel>
                         <TabPanel>
-                        <StepSec>
-                            <div className="">
-                            <div className="flex items-center">
-                                <span className="font-play w-[56px] h-[56px] border-2 border-solid inline-flex text-white justify-center items-center text-3xl text-white-main">3</span>
-                                <h2 className="font-play text-white-main text-9 md:text-3xl ml-8">Loyalty Bonus</h2>
-                            </div>
-                            <p  className="text-white-2 text-8 mt-7 leading-8">The loyalty bonus program incentivizes users to engage with all the Qonetum finance projects</p>
-                            <IFrameCol>
-                                <img src={iframe3}></img>
-                            </IFrameCol>
-                            </div>
-                        </StepSec>
+                            <StepSec>
+                                <div className="">
+                                    <div className='font-play text-white-main text-9 md:text-1 text-center'>Group trading competition</div>
+                                    <div className='text-center font-montserrat mt-2'>
+                                        <p className='text-white-2 text-8 mt-7 leading-8'>Each Qonetum project seeks to gain widespread adoption, which encourages users to utilize the technology often. Therefore, monthly rewards are given for the top 100 users by volume in each project. Rewards start at $10,000 in vouchers and decrease evenly to a $100 floor.</p>
+                                    </div>
+                                    <div className="max-w-4xl mt-14 mx-auto">
+                                        <div className="flex items-center mb-6">
+                                            <span className="text-2xl text-white-main font-bold">Top 100 Winners</span>
+                                            <a href="#" className="btn-golden inline-flex items-center justify-center w-[198px] h-[48px] bg-yellow-main border-2 border-solid bg-opacity-0 text-white-1 font-bold text-sm uppercase ml-auto">Check if you won</a>
+                                        </div>
+                                        <Table>
+                                            <thead>
+                                                <tr>
+                                                    <Thd className="w-[10%]"></Thd>
+                                                    <Thd className="text-left">Wallet address</Thd>
+                                                    <Thd className="text-left">dVoucher</Thd>
+                                                    <Thd className="text-center w-[20%]">Claim</Thd>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <Tcell><img src={Reward1}></img></Tcell>
+                                                    <Tcell className="txt-blue">0x084.....6a80</Tcell>
+                                                    <Tcell>1,000,000</Tcell>
+                                                    <Tcell></Tcell>
+                                                </tr>
+                                                <tr>
+                                                    <Tcell><img src={Reward2}></img></Tcell>
+                                                    <Tcell className="txt-blue">0x084.....6a80</Tcell>
+                                                    <Tcell>900,000</Tcell>
+                                                    <Tcell><a href="#" className="btn-golden inline-flex items-center justify-center w-[246px] h-[34px] bg-yellow-main border-2 border-solid bg-opacity-0 text-white-1 font-bold text-sm uppercase">Claim</a></Tcell>
+                                                </tr>
+                                                <tr>
+                                                    <Tcell><img src={Reward3}></img></Tcell>
+                                                    <Tcell className="txt-blue">0x084.....6a80</Tcell>
+                                                    <Tcell>800,000</Tcell>
+                                                    <Tcell></Tcell>
+                                                </tr>
+                                                <tr>
+                                                    <Tcell>4</Tcell>
+                                                    <Tcell className="txt-blue">0x084.....6a80</Tcell>
+                                                    <Tcell>700,000</Tcell>
+                                                    <Tcell></Tcell>
+                                                </tr>
+                                                <tr>
+                                                    <Tcell>5</Tcell>
+                                                    <Tcell className="txt-blue">0x084.....6a80</Tcell>
+                                                    <Tcell>600,000</Tcell>
+                                                    <Tcell></Tcell>
+                                                </tr>
+                                                <tr>
+                                                    <Tcell>6</Tcell>
+                                                    <Tcell className="txt-blue">0x084.....6a80</Tcell>
+                                                    <Tcell>500,000</Tcell>
+                                                    <Tcell></Tcell>
+                                                </tr>
+                                                <tr>
+                                                    <Tcell>7</Tcell>
+                                                    <Tcell className="txt-blue">0x084.....6a80</Tcell>
+                                                    <Tcell>400,000</Tcell>
+                                                    <Tcell></Tcell>
+                                                </tr>
+                                                <tr>
+                                                    <Tcell>8</Tcell>
+                                                    <Tcell className="txt-blue">0x084.....6a80</Tcell>
+                                                    <Tcell>300,000</Tcell>
+                                                    <Tcell></Tcell>
+                                                </tr>
+                                                <tr>
+                                                    <Tcell>9</Tcell>
+                                                    <Tcell className="txt-blue">0x084.....6a80</Tcell>
+                                                    <Tcell>200,000</Tcell>
+                                                    <Tcell></Tcell>
+                                                </tr>
+                                                <tr>
+                                                    <Tcell>10</Tcell>
+                                                    <Tcell className="txt-blue">0x084.....6a80</Tcell>
+                                                    <Tcell>100,000</Tcell>
+                                                    <Tcell></Tcell>
+                                                </tr>
+                                            </tbody>
+                                        </Table>
+                                        <Tfooter>
+                                            <div>Page 
+                                                <SelectCustom>
+                                                    <select>
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                        <option>4</option>
+                                                    </select>
+                                                </SelectCustom>
+                                                result 1-10 of 300</div>   
+                                        </Tfooter>
+                                    </div>
+                                </div>
+                            </StepSec>
                         </TabPanel>
 
                         <TabPanel>
                             <StepSec>
                                 <div className="">
-                                    <div className="flex items-center">
-                                        <span className="font-play w-[56px] h-[56px] border-2 border-solid inline-flex text-white justify-center items-center text-3xl text-white-main">4</span>
-                                        <h2 className="font-play text-white-main text-9 md:text-3xl ml-8">Daily usage</h2>
+                                    <div className='font-play text-white-main text-9 md:text-1 text-center'>Group staking competition</div>
+                                    <div className='text-center font-montserrat mt-2'>
+                                        <p className='text-white-2 text-8 mt-7 leading-8'>Staked tokens show trust in crypto, which encourages more users and partners. Therefore, monthly rewards are given for the top 100 users by staking volume in each project. Rewards start at $10,000 in vouchers and decrease evenly to a $100 floor. </p>
                                     </div>
-                                    <p  className="text-white-2 text-8 mt-7 leading-8">Visit and view Qonetum sites daily to check out new functionalities </p>
-                                    <IFrameCol>
-                                        <img src={iframe3}></img>
-                                    </IFrameCol>
+                                    <div className="max-w-4xl mt-14 mx-auto">
+                                        <div className="flex items-center mb-6">
+                                            <span className="text-2xl text-white-main font-bold">Top 100 Winners</span>
+                                            <a href="#" className="btn-golden inline-flex items-center justify-center w-[198px] h-[48px] bg-yellow-main border-2 border-solid bg-opacity-0 text-white-1 font-bold text-sm uppercase ml-auto">Check if you won</a>
+                                        </div>
+                                        <Table>
+                                            <thead>
+                                                <tr>
+                                                    <Thd className="w-[10%]"></Thd>
+                                                    <Thd className="text-left">Wallet address</Thd>
+                                                    <Thd className="text-left">dVoucher</Thd>
+                                                    <Thd className="text-center w-[20%]">Claim</Thd>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <Tcell><img src={Reward1}></img></Tcell>
+                                                    <Tcell className="txt-blue">0x084.....6a80</Tcell>
+                                                    <Tcell>1,000,000</Tcell>
+                                                    <Tcell></Tcell>
+                                                </tr>
+                                                <tr>
+                                                    <Tcell><img src={Reward2}></img></Tcell>
+                                                    <Tcell className="txt-blue">0x084.....6a80</Tcell>
+                                                    <Tcell>900,000</Tcell>
+                                                    <Tcell><a href="#" className="btn-golden inline-flex items-center justify-center w-[246px] h-[34px] bg-yellow-main border-2 border-solid bg-opacity-0 text-white-1 font-bold text-sm uppercase">Claim</a></Tcell>
+                                                </tr>
+                                                <tr>
+                                                    <Tcell><img src={Reward3}></img></Tcell>
+                                                    <Tcell className="txt-blue">0x084.....6a80</Tcell>
+                                                    <Tcell>800,000</Tcell>
+                                                    <Tcell></Tcell>
+                                                </tr>
+                                                <tr>
+                                                    <Tcell>4</Tcell>
+                                                    <Tcell className="txt-blue">0x084.....6a80</Tcell>
+                                                    <Tcell>700,000</Tcell>
+                                                    <Tcell></Tcell>
+                                                </tr>
+                                                <tr>
+                                                    <Tcell>5</Tcell>
+                                                    <Tcell className="txt-blue">0x084.....6a80</Tcell>
+                                                    <Tcell>600,000</Tcell>
+                                                    <Tcell></Tcell>
+                                                </tr>
+                                                <tr>
+                                                    <Tcell>6</Tcell>
+                                                    <Tcell className="txt-blue">0x084.....6a80</Tcell>
+                                                    <Tcell>500,000</Tcell>
+                                                    <Tcell></Tcell>
+                                                </tr>
+                                                <tr>
+                                                    <Tcell>7</Tcell>
+                                                    <Tcell className="txt-blue">0x084.....6a80</Tcell>
+                                                    <Tcell>400,000</Tcell>
+                                                    <Tcell></Tcell>
+                                                </tr>
+                                                <tr>
+                                                    <Tcell>8</Tcell>
+                                                    <Tcell className="txt-blue">0x084.....6a80</Tcell>
+                                                    <Tcell>300,000</Tcell>
+                                                    <Tcell></Tcell>
+                                                </tr>
+                                                <tr>
+                                                    <Tcell>9</Tcell>
+                                                    <Tcell className="txt-blue">0x084.....6a80</Tcell>
+                                                    <Tcell>200,000</Tcell>
+                                                    <Tcell></Tcell>
+                                                </tr>
+                                                <tr>
+                                                    <Tcell>10</Tcell>
+                                                    <Tcell className="txt-blue">0x084.....6a80</Tcell>
+                                                    <Tcell>100,000</Tcell>
+                                                    <Tcell></Tcell>
+                                                </tr>
+                                            </tbody>
+                                        </Table>
+                                        <Tfooter>
+                                            <div>Page 
+                                                <SelectCustom>
+                                                    <select>
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                        <option>4</option>
+                                                    </select>
+                                                </SelectCustom>
+                                                result 1-10 of 300</div>   
+                                        </Tfooter>
+                                    </div>
                                 </div>
                             </StepSec>
                         </TabPanel>
@@ -144,4 +486,37 @@ const IFrameCol = styled(FlexDiv) `
 const MsgBox = styled.section `
     background-color: #000; width: 664px; display: table; margin: 0px auto; color: #fff; font-weight: bold; font-size: 14px; padding: 22px 33px 33px;
     .btn-teal {background-color: #4edd9e;}
+`
+
+const Table = styled.table `
+    width: 100%;
+    tr:hover { background: #191a22;}
+`
+const Thd = styled.th `
+    font-size: 14px; color: #989898; padding: 12px 18px; border-top: 2px solid #262626; border-bottom: 2px solid #262626; font-weight: 700; max-width: 25%; background-color: #080808; 
+    & + th {
+        border-left: 1px solid #262626
+    }
+`
+const Tcell = styled.td `
+    font-size: 14px; color: #fff; max-width: 25%; padding: 12px 18px; border-bottom: 1px solid #262626; position: relative;
+    & + td {
+        border-left: 1px solid #262626
+    }
+    &.txt-blue {color: #4557ff;}
+`
+
+const Tfooter = styled.div `
+    display: flex; align-items: center; justify-content: space-between; font-size: 12px; color: #aaaaaa; padding: 16px 0 0;
+    
+    p {color: #3b3e4b;}
+    a {color: #aaa; margin: 0 10px;}
+    a:hover {color: #91dc27;}
+`
+const SelectCustom = styled.div `
+    display: inline-block; position: relative; margin: 0 10px;
+    select {background: #262626; min-width: 65px; color: #fff; font-size: 14px; border: 0; height: 30px;  border-radius: 0; padding: 0 10px;   appearance: none;}
+    &:after {
+        content: "\f0d7"; font-family: "Font Awesome 5 Free"; color: #aaa; font-weight: 900; position: absolute; right: 5px; top: 8px;
+    }
 `

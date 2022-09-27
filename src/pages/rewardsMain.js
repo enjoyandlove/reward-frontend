@@ -1,6 +1,7 @@
 import React, { PureComponent } from "react";
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import styled from 'styled-components';
-import AppBar from './../components/AppBar/AppBar';
+import AppBar from './../components/AppBar/AppBar2';
 import Footer02 from './../components/Footer/Footer02';
 import NavBullets from './../components/NavBullets';
 
@@ -8,6 +9,11 @@ import PersonalRewards from './personal-rewards';
 import PersonalRewards01 from './personal-rewards01';
 import GroupRewards from './group-rewards';
 import CompetitionRewardsTabs from './competitionRewardsTabs';
+import ReferralProgram from './referralProgram';
+import CompetitionRewards from './competitionRewards';
+import TradingRewards from './tradingRewards';
+import StakingRewards from './stakingRewards';
+import DeadTokenRecovery from './deadTokenRecovery';
 import MainBg from './../assets/main-bg.jpg'
 
 
@@ -19,10 +25,23 @@ export default class RewardsMain extends PureComponent {
                 <AppBar />
                     <MainContainer>
                         <NavBullets/>
+                        <Routes>
+                            <Route path='/' element={<PersonalRewards/>} />
+                            <Route path='/personalRewards01' element={<PersonalRewards01 />}></Route>
+                            <Route path='/group-rewards' element={<GroupRewards />}></Route>
+                            <Route path='/competition-rewards' element={<CompetitionRewards />}></Route>
+                            <Route path='/competition-rewards-tabs' element={<CompetitionRewardsTabs />}></Route>
+                            <Route path='/referralProgram' element={<ReferralProgram />}></Route>
+                            <Route path='/trading-rewards' element={<TradingRewards />}></Route>
+                            <Route path='/staking-rewards' element={<StakingRewards />}></Route>
+                            <Route path='/dead-token-recovery' element={<DeadTokenRecovery />}></Route>
+                        </Routes>
                         {/* <PersonalRewards/>
                         <PersonalRewards01/> */}
                         {/* <GroupRewards/> */}
-                        <CompetitionRewardsTabs/>
+                        {/* <CompetitionRewardsTabs/> */}
+                        {/* <ReferralProgram/> */}
+                        {/* <CompetitionRewards/> */}
                     </MainContainer>
                 <Footer02 />
             </div>
