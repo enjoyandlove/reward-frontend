@@ -6,7 +6,8 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
 
 // Images
-
+import ico1 from './../assets/BSC.png';
+import ico2 from './../assets/xyz.png';
 
 
 
@@ -39,7 +40,7 @@ export default class DeadTokenRecovery extends PureComponent {
                             </div>
                         </CounterMain>
                         <div className='font-play text-white-main text-9 md:text-3xl mt-[70px] mb-5'>Recovery process</div>
-                        <ol className="text-white-2 list-decimal pl-5 text-lg">
+                        <ol className="text-white-2 list-decimal pl-7 text-lg">
                             <li className="mb-3">Investors need to submit and lock dead tokens under the Dumper Shield for 3 years.</li>
                             <li className="mb-3">For each locked token Investors are eligible to buy 1 dVoucher token at a 100:1 token to token ratio.</li>
                             <li className="mb-3">Once eligible purchases are made, dVoucher sends as an NFT to investor wallets which can be traded on marketplaces.</li>
@@ -58,35 +59,57 @@ export default class DeadTokenRecovery extends PureComponent {
                             <li className="mb-3">Each dVoucher can only be used as a lottery ticket once</li>
                         </ol>
                     </div>
-                    <hr className="mb-10"></hr>
-                    <div class="font-play text-white-main text-1 md:text-3xl text-center">recover your dead tokens</div>
-                    <form className="text-white-main">
+                    <hr className="my-14 border-zinc-900"></hr>
+                    <div class="font-play text-white-main text-1 md:text-4xl text-center mb-12">recover your dead tokens</div>
+                    <Form className="text-white-main">
                         <div className="grid grid-cols-2">
-                            <div className="px-3">
+                            <div className="px-3 mb-5">
                                 <label className="text-lg font-bold mb-3 block">Choose a network</label>
-                                <input className="px-6 w-full h-[67px] bg-transparent border-2 border-current border-zinc-900" type="text"></input></div>
-                            <div className="px-3">
+                                <button className="px-6 text-lg w-full h-[67px] bg-transparent border-2 border-current border-zinc-900 text-left flex items-center"><img className="mr-5" src={ico1}></img>BSC <i class="fa fa-caret-down ml-auto"></i></button>
+                            </div>
+                            <div className="px-3 mb-5"> 
                                 <label className="text-lg font-bold mb-3 block">Choose token</label>
-                                <input className="px-6 w-full h-[67px] bg-transparent border-2 border-current border-zinc-900" type="text"></input>
-                                <span>Smart contract 0x5DC53496E8dd50887785d75D432cBa6A86F82cad  <i class="fas fa-external-link-alt"></i></span>
+                                <button className="px-6 text-lg w-full h-[67px] bg-transparent border-2 border-current border-zinc-900 text-left flex items-center"><img className="mr-5" src={ico2}></img>XYZ <i class="fa fa-caret-down ml-auto"></i></button>
+                                <p>Smart contract <a>0x5DC53496E8dd50887785d75D432cBa6A86F82cad<i class="fas fa-external-link-alt ml-1"></i></a></p>
                             </div>
-                            <div className="px-3">
-                                <label className="text-lg font-bold mb-3 block">Select amount of tokens to shield </label>
+                            <div className="px-3 mb-5">
+                                <label className="text-lg font-bold mb-3 block">Select amount of tokens to shield <sup className="help-circle">
+                                <i className="fas fa-question-circle protip" data-pt-position="top" data-pt-title="The slippage option finds the best price in the market with a slippage limit option under your trade options" aria-hidden="true"
+                                ></i></sup> </label>
                                 <input className="px-6 w-full h-[67px] bg-transparent border-2 border-current border-zinc-900" type="text"></input>
+                                <p className="ml-auto">Balance <span>10,000,000 XYZ</span>  |  MAX</p>
                             </div>
-                            <div className="px-3">
+                            <div className="px-3 mb-5">
                                 <label className="text-lg font-bold mb-3 block">Buy dVoucher </label>
                                 <input className="px-6 w-full h-[67px] bg-transparent border-2 border-current border-zinc-900" type="text"></input>
+                                <p className="">Eligible to buy: <span>1,545,653 dVoucher</span> |  MAX</p>     
                             </div>
                         </div>
                         <div className="grid grid-cols-1 px-3">
-                            <label className="text-lg font-bold mb-3 block">Deposit security</label>
-                            <input className="px-6 w-full h-[67px] bg-transparent border-2 border-current border-zinc-900" type="text"></input>
+                            <label className="text-lg font-bold mb-3 block">Deposit security <sup className="help-circle">
+                            <i className="fas fa-question-circle protip" data-pt-position="top" data-pt-title="The slippage option finds the best price in the market with a slippage limit option under your trade options" aria-hidden="true"
+                            ></i></sup></label>
+                            <InputBox>
+                                <div className="input-ico"><img src={ico1}></img></div>
+                                <input className="pl-[80px] pr-6 w-full h-[67px] bg-transparent border-2 border-current border-zinc-900" type="text"></input>
+                            </InputBox>
+                            <p className="ml-auto">Balance <span>845.586 BNB</span> |  MAX</p> 
                         </div>
                         <div className="flex justify-center">
-                            <button className="btn-golden w-[660px] h-[80px] mt-6 bg-yellow-main border-2 border-solid bg-opacity-0 text-white-1 font-bold text-xl uppercase">RECOVER YOUR DEAD TOKEN</button>
+                            <button className="btn-golden shadow-lg w-[660px] h-[80px] mt-6 bg-yellow-main border-2 border-solid bg-opacity-0 text-white-1 font-bold text-xl uppercase">RECOVER YOUR DEAD TOKEN</button>
                         </div>
-                    </form>
+                    </Form>
+                    <h3 className="text-white-main text-2xl font-bold leading-8 mb-10">History</h3>
+                    <ul className="border-t-[1px] border-solid border-zinc-900">
+                        <li className="flex py-3 text-white-2 border-b-[1px] border-solid border-zinc-800">Total tokens sent to the dumper shield 
+                        <span className="ml-auto">100,000</span></li>
+                        <li className="flex py-3 text-white-2 border-b-[1px] border-solid border-zinc-800">Your eligible dVouchers 
+                        <span className="ml-auto">$1,000</span></li>
+                        <li className="flex py-3 text-white-2 border-b-[1px] border-solid border-zinc-800">dVocuher purchased    <a className="text-red-600	ml-3">Claim a refund</a> 
+                        <span className="ml-auto">$500</span></li>
+                        <li className="flex py-3 text-white-2 border-b-[1px] border-solid border-zinc-800">dVocuher available to buy 
+                        <span className="ml-auto">$500</span></li>
+                    </ul>
                 </Container>
             </>
         );
@@ -98,6 +121,7 @@ const FlexDiv = styled.div`
 `;
 const Container = styled.div`
     width:1360px; margin: 0px auto;
+    .border-zinc-900 {border-color: #363636;}
 `
 const BreadCrumbs = styled.div`
     color: #989898; margin-bottom: 50px;
@@ -128,4 +152,18 @@ const Rtimer = styled.div `
 `
 const DumperLink = styled.a `
     color: #e9a134;
+`
+
+const Form = styled.form `
+    margin-bottom: 90px;
+    p {font-size: 12px; color: #989898; margin-top: 5px; display: table;
+        a {color: #e9a134;}
+        span {color: #fff;}
+    }
+`
+const InputBox = styled.div `
+    position: relative;
+    .input-ico { 
+        position: absolute; left: 0; top: 0; bottom: 0; background: #363636; width: 66px; display: flex; align-items: center; justify-content: center;
+    }
 `

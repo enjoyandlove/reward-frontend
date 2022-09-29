@@ -52,14 +52,14 @@ export default class GroupRewards extends PureComponent {
                                     <span>4</span>
                                     <span>8</span>    
                                     <span>5</span>,   
-                                    <span>9</span>    
+                                    <span>9</span>
                                     <span>5</span>   
                                     <span>6</span>.    
                                     <span>2</span>
                                     <span>3</span>
                                 </Rvoucher>
                                 <Rtimer>
-                                    <p className="font-bold">Participation end soon</p>
+                                    <p className="font-bold mb-1">Participation end soon</p>
                                     <b>30</b> days  :  <b>22</b> hours  :  <b>09</b> minutes  :  <b>12</b> seconds
                                 </Rtimer>
                             </div>

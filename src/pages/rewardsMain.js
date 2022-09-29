@@ -6,7 +6,7 @@ import Footer02 from './../components/Footer/Footer02';
 import NavBullets from './../components/NavBullets';
 
 import PersonalRewards from './personal-rewards';
-import PersonalRewards01 from './personal-rewards01';
+import PersonalRewardsTabs from './personal-rewards-tabs';
 import GroupRewards from './group-rewards';
 import CompetitionRewardsTabs from './competitionRewardsTabs';
 import ReferralProgram from './referralProgram';
@@ -14,6 +14,7 @@ import CompetitionRewards from './competitionRewards';
 import TradingRewards from './tradingRewards';
 import StakingRewards from './stakingRewards';
 import DeadTokenRecovery from './deadTokenRecovery';
+
 import MainBg from './../assets/main-bg.jpg'
 
 
@@ -27,7 +28,7 @@ export default class RewardsMain extends PureComponent {
                         <NavBullets/>
                         <Routes>
                             <Route path='/' element={<PersonalRewards/>} />
-                            <Route path='/personalRewards01' element={<PersonalRewards01 />}></Route>
+                            <Route path='/personal-rewards-tabs' element={<PersonalRewardsTabs />}></Route>
                             <Route path='/group-rewards' element={<GroupRewards />}></Route>
                             <Route path='/competition-rewards' element={<CompetitionRewards />}></Route>
                             <Route path='/competition-rewards-tabs' element={<CompetitionRewardsTabs />}></Route>
@@ -36,12 +37,6 @@ export default class RewardsMain extends PureComponent {
                             <Route path='/staking-rewards' element={<StakingRewards />}></Route>
                             <Route path='/dead-token-recovery' element={<DeadTokenRecovery />}></Route>
                         </Routes>
-                        {/* <PersonalRewards/>
-                        <PersonalRewards01/> */}
-                        {/* <GroupRewards/> */}
-                        {/* <CompetitionRewardsTabs/> */}
-                        {/* <ReferralProgram/> */}
-                        {/* <CompetitionRewards/> */}
                     </MainContainer>
                 <Footer02 />
             </div>
