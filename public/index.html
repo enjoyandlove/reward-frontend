@@ -25,6 +25,10 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+
+    <link rel="stylesheet" type="text/css" href="%PUBLIC_URL%/css/protip.min02.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+  integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -40,4 +44,15 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <script src="%PUBLIC_URL%/js/protip.min.js"></script>
+
+  <script>
+    $(".protipNp").each(function () {
+      var title = $(this).attr("data-pt-title");
+      var html = "<div class='mmProtip ani-1' >" + title + " </div>";
+      $(this).append(html);
+    });
+    $.protip();
+  </script>
 </html>

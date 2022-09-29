@@ -30,6 +30,9 @@ code {
   font-weight: normal;
 }
 
+a {
+  cursor: pointer;
+}
 .background {
   background-image: url("./assets/background.png");
 }
@@ -82,6 +85,11 @@ code {
 .gold:hover > div {border-color: #db9831; box-shadow: 0 0 10px #db9831;}
 .platinum:hover > div {border-color: #c9c9c9; box-shadow: 0 0 10px #c9c9c9;}
 .header-btn {box-shadow: 0 0 10px rgba(255,255,255,0.8);}
+
+input:focus {outline: none; }
+.btn-golden {border-color: #e9a134; box-shadow: 0 0 8px #e9a134; transition: all 0.3s ease-in-out 0s;}
+.btn-golden:hover {background-color: #e9a134;}
+/* .list-disc ::marker {font-size: 25px;} */
 
 @media screen and (max-width: 767px) {
   .totalBox {text-align: center}
