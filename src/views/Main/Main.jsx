@@ -35,7 +35,7 @@ const Main = () => {
                     </div>
                     <div className='relative'>
                         <div className="md:flex justify-center relative mb-5">
-                            <div className='w-full md:w-auto'>
+                            <div className='w-full flex justify-center md:w-auto'>
                                 <img src={jackpot} alt='jackpot' />
                             </div>
                             <div className="table md:absolute md:block bottom-1/2 md:translate-y-1/2 right-0 round-rec rounded-[10px] md:rounded-r-[0] mx-auto">
