@@ -7,13 +7,13 @@ const NavBullets = () => {
     return (
         <>
             <Bullets>
-                <NavLink to="/rewards/personalRewards01"><span>Personal rewards</span></NavLink>
+                <NavLink to="/rewards/personal-rewards-tabs"><span>Personal rewards</span></NavLink>
                 <NavLink to="/rewards/group-rewards"><span>Group rewards</span></NavLink>
                 <NavLink to="/rewards/competition-rewards"><span>Competition rewards</span></NavLink>
                 <NavLink to="/rewards/trading-rewards"><span>Trading rewards</span></NavLink>
                 <NavLink to="/rewards/staking-rewards"><span>Staking rewards</span></NavLink>
+                <NavLink to="/rewards/referralProgram"><span>Referral Program</span></NavLink>
                 <NavLink to="/rewards/dead-token-recovery"><span>Dead token recovery</span></NavLink>
-                <NavLink to="/rewards/someting4"><span>Personal rewards</span></NavLink>
                 <NavLink to="/rewards/someting5"><span>Personal rewards</span></NavLink>
             </Bullets>
         </>

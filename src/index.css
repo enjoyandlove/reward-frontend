@@ -4,9 +4,10 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+    sans-serif; */
+  font-family: "Montserrat";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -87,9 +88,24 @@ a {
 .header-btn {box-shadow: 0 0 10px rgba(255,255,255,0.8);}
 
 input:focus {outline: none; }
+.btn-bronze {border-color: #dea695; color: #dea695; box-shadow: 0 0 8px #dea695; transition: all 0.3s ease-in-out 0s;}
+.btn-bronze:hover {background-color: #dea695; color: #fff;}
+.btn-white {border-color: #fff; color: #fff; box-shadow: 0 0 8px #fff; transition: all 0.3s ease-in-out 0s;}
+.btn-white:hover {background-color: #fff; color: #111111;}
+.btn-silver {border-color: #989898; color: #989898; box-shadow: 0 0 8px #989898; transition: all 0.3s ease-in-out 0s;}
+.btn-silver:hover {background-color: #989898; color: #fff;}
+.btn-silver.shadow-lg {box-shadow: 0 0 12px #989898;}
+.btn-gold {border-color: #e9a134; color: #e9a134; box-shadow: 0 0 8px #e9a134; transition: all 0.3s ease-in-out 0s;}
+.btn-gold:hover {background-color: #e9a134; color: #fff;}
 .btn-golden {border-color: #e9a134; box-shadow: 0 0 8px #e9a134; transition: all 0.3s ease-in-out 0s;}
 .btn-golden:hover {background-color: #e9a134;}
-/* .list-disc ::marker {font-size: 25px;} */
+.btn-golden.shadow-lg {box-shadow: 0 0 12px #e9a134;}
+.list-disc ::marker {display: none;}
+.list-disc li {list-style: none;}
+.list-disc li::before {content: ""; width: 10px; height: 10px; display: inline-block; vertical-align: top; background: currentColor; border-radius: 100px; margin: 12px 11px 0 -20px;}
+.list-decimal ::marker {}
+textarea {resize: none;}
+
 
 @media screen and (max-width: 767px) {
   .totalBox {text-align: center}

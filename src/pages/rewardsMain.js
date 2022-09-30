@@ -6,7 +6,7 @@ import Footer02 from './../components/Footer/Footer02';
 import NavBullets from './../components/NavBullets';
 
 import PersonalRewards from './personal-rewards';
-import PersonalRewards01 from './personal-rewards01';
+import PersonalRewardsTabs from './personal-rewards-tabs';
 import GroupRewards from './group-rewards';
 import CompetitionRewardsTabs from './competitionRewardsTabs';
 import ReferralProgram from './referralProgram';
@@ -14,10 +14,12 @@ import CompetitionRewards from './competitionRewards';
 import TradingRewards from './tradingRewards';
 import StakingRewards from './stakingRewards';
 import DeadTokenRecovery from './deadTokenRecovery';
+
 import MainBg from './../assets/main-bg.jpg'
 
 
 export default class RewardsMain extends PureComponent {
+<<<<<<< HEAD
   render() {
     return (
       <>
@@ -48,6 +50,32 @@ export default class RewardsMain extends PureComponent {
       </>
     );
   }
+=======
+    render() {
+        return (
+        <>
+            <div className='background'>
+                <AppBar />
+                    <MainContainer>
+                        <NavBullets/>
+                        <Routes>
+                            <Route path='/' element={<PersonalRewards/>} />
+                            <Route path='/personal-rewards-tabs' element={<PersonalRewardsTabs />}></Route>
+                            <Route path='/group-rewards' element={<GroupRewards />}></Route>
+                            <Route path='/competition-rewards' element={<CompetitionRewards />}></Route>
+                            <Route path='/competition-rewards-tabs' element={<CompetitionRewardsTabs />}></Route>
+                            <Route path='/referralProgram' element={<ReferralProgram />}></Route>
+                            <Route path='/trading-rewards' element={<TradingRewards />}></Route>
+                            <Route path='/staking-rewards' element={<StakingRewards />}></Route>
+                            <Route path='/dead-token-recovery' element={<DeadTokenRecovery />}></Route>
+                        </Routes>
+                    </MainContainer>
+                <Footer02 />
+            </div>
+        </>
+        );
+    }
+>>>>>>> origin/reward_UI
 }
 
 const FlexDiv = styled.div`
