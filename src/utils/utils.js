@@ -14,7 +14,7 @@ export const sortAddress = (add) => {
 
 export const getDvoucherPending = async (address) => {
   let pending
-  await axios.get(`https://rewardslist.herokuapp.com/jackpot/${address}`).then((res) => {
+  await axios.get(`http://localhost:8000/jackpot/${address}`).then((res) => {
     if(res.status != 200) return;
     pending = res.data.Totalvalue
   })
