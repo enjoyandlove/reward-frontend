@@ -11,71 +11,56 @@ import gmail from '../../assets/social-icons/gmail.png';
 import twitter from '../../assets/social-icons/twitter.png';
 import linkedin from '../../assets/social-icons/linkedin.png';
 import email from '../../assets/social-icons/email.png';
-import { InjectedConnector } from '@web3-react/injected-connector';
-import { BscConnector } from '@binance-chain/bsc-connector';
-import { WalletConnectConnector } from '@web3-react/walletconnect-connector';
-import { MathWalletConnector } from '@harmony-react/mathwallet-connector';
-import { sortAddress, contract } from '../../utils/utils';
+import { sortAddress, claimRewards, getDvoucherPending, getDvoucherBalance } from '../../utils/utils';
+import { injected, bsc, Wallet_Connect, mathwallet } from '../../utils/connectors';
 
-const WalletConnect = (props) => {
+
+const WalletConnect = () => {
 
   const { activate, deactivate, active, chainId, account } = useWeb3React();
   const [isModalOpened, setIsModalOpened] = useState(false);
-  const [dvoucherPending, setDvoucherPending] = useState(null);
-  const [dvoucherBalance, setDvoucherBalance] = useState(null);
-  const infura_key = process.env.REACT_APP_INFURA_KEY || '8e09516377c84767b271d0a681ead189';
+  const [dvoucherPending, setDvoucherPending] = useState();
+  const [dvoucherBalance, setDvoucherBalance] = useState();
 
   useEffect(() => {
-    props.connect(active);
-    // setDvoucherBalance(contract.methods.balanceOf(account).call());
-    // setDvoucherPending
-  })
+    if (active) {
+      const perform = async () => {
+        const pending = await getDvoucherPending(account)
+        setDvoucherPending(pending)
+        const balance = await getDvoucherBalance(account)
+        setDvoucherBalance(balance)
+      }
+      perform()
 
-  const Injected = new InjectedConnector({
-    supportedChainIds: [1, 3, 4, 5, 42, 56],
-  });
+    }
+  }, [active])
 
-  const bsc = new BscConnector({
-    supportedChainIds: [1, 56], // later on 1 ethereum mainnet and 3 ethereum ropsten will be supported
-  });
-
-  const Wallet_Connect = new WalletConnectConnector({
-    supportedChainIds: [1, 56],
-    rpc: {
-      1: `https://mainnet.infura.io/v3/${infura_key}`,
-      56: 'https://bsc-dataseed.binance.org',
-    },
-    bridge: 'https://bridge.walletconnect.org',
-    qrcode: true,
-  });
-
-  const mathwallet = new MathWalletConnector({
-    chainId: [1, 56],
-  });
-
-  const handleBinance = () => {
-    activate(bsc);
+  const handleBinance = async () => {
+    await activate(bsc);
     setIsModalOpened(false);
   }
 
   const handleMetamask = async () => {
     try {
-      await activate(Injected);
-    } catch(err) {
+      await activate(injected);
+    } catch (err) {
       console.log(err)
     }
-    console.log(account)
     setIsModalOpened(false);
   }
 
-  const handleTrust = () => {
-    activate(Wallet_Connect);
+  const handleTrust = async () => {
+    await activate(Wallet_Connect);
     setIsModalOpened(false);
   }
 
-  const handleMath = () => {
-    activate(mathwallet);
+  const handleMath = async () => {
+    await activate(mathwallet);
     setIsModalOpened(false);
+  }
+
+  const handleClaim = async () => {
+    await claimRewards(dvoucherPending, account)
   }
 
   return (
@@ -83,10 +68,10 @@ const WalletConnect = (props) => {
       <div>
         {active ? (
           <div className='flex items-center'>
-            <p className='text-4 text-white-2 font-montserrat'>dVouchers pending:<span><FontAwesomeIcon icon={faQuestionCircle} /></span><span className='text-white-main font-bold pl-2'>$1,458,653</span></p>
-            <button className='w-[120px] h-[35px] border-2 border-solid border-yellow-main text-yellow-main text-4 font-montserrat font-bold ml-4'>CLAIM</button>
+            <p className='text-4 text-white-2 font-montserrat'>dVouchers pending:<span><FontAwesomeIcon icon={faQuestionCircle} /></span><span className='text-white-main font-bold pl-2'>${dvoucherPending}</span></p>
+            <button className='w-[120px] h-[35px] border-2 border-solid border-yellow-main text-yellow-main text-4 font-montserrat font-bold ml-4' onClick={handleClaim}>CLAIM</button>
             <div className='text-white-8 text-4 font-montserrat mx-4'>|</div>
-            <p className='text-4 text-white-2 font-montserrat'>dVoucher balance: <span className='font-bold text-yellow-main'>1</span></p>
+            <p className='text-4 text-white-2 font-montserrat'>dVoucher balance: <span className='font-bold text-yellow-main'>{dvoucherBalance}</span></p>
             <div className='text-white-8 text-4 font-montserrat mx-4'>|</div>
             <p className='font-bold text-white-main text-4 font-montserrat'>0x{sortAddress(account)}</p>
           </div>
@@ -101,7 +86,7 @@ const WalletConnect = (props) => {
           onClose={() => {
             setIsModalOpened(false);
           }}>
-          <div className='text-right text-white-main text-8 mt-3 mb-5 cursor-pointer' onClick={() => {setIsModalOpened(false);}}>
+          <div className='text-right text-white-main text-8 mt-3 mb-5 cursor-pointer' onClick={() => { setIsModalOpened(false); }}>
             <FontAwesomeIcon icon={faTimes} />
           </div>
           <div className='flex px-5 pb-8'>

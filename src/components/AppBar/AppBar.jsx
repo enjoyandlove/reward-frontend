@@ -8,7 +8,6 @@ import WalletConnect from './WalletConnect';
 const AppBar = () => {
 
   const num = [1, 1, 2, 4, 5, 6, 3, 4, 3, 4];
-  const [isConnected, setConnected] = useState();
 
   return (
     <>
@@ -22,7 +21,7 @@ const AppBar = () => {
           <div className='flex text-white-main mb-2 md:mb-0'><MiniPad num={num[0]} /> <MiniPad num={num[1]} /> : <MiniPad num={num[2]} /><MiniPad num={num[3]} />:<MiniPad num={num[4]} /><MiniPad num={num[5]} />:<MiniPad num={num[6]} /><MiniPad num={num[7]} /></div>
           <div className='font-bold text-white-2 font-montserrat text-4 mb-6 md:mb-0 md:ml-5'>Last month winners</div>
         </div>
-        <WalletConnect connect={setConnected} />
+        <WalletConnect />
       </div>
     </>
   )
