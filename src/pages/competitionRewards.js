@@ -47,17 +47,18 @@ export default class CompetitionRewards extends PureComponent {
                         <FontAwesomeIcon icon={faAngleRight} className='mx-1' />
                         <BreadLinks>PDO finance</BreadLinks>
                     </BreadCrumbs>
-                    <StepSec>
-                        <div className="">
+                    <StepSec >
+                        <div className="wow zoomIn" data-wow-delay="0.1s">
                             <div className='font-play text-white-main text-9 md:text-1 text-center'>social engagement </div>
                             <div className='text-center font-montserrat mt-2'>
                                 <p className='text-white-2 text-8 mt-7 leading-8'>Engaging with Qonetum Foundation social posts needs to be consistent in order to achieve long-term organic growth. Therefore, each day, users are eligible for extra lottery entries for retweets and likes. Each Twitter like equals three extra entries and retweets equal 5 per day. An extra 10 entries goes to the best reply of the day and is determined by likes. </p>
                             </div>
-                            <IFrameCol>
-                                <img src={iframe2}></img>                                
-                            </IFrameCol>
+                          </div>
+                          <IFrameCol className="wow fadeInUp" data-wow-delay="0.5s">
+                              <img src={iframe2}></img>                                
+                          </IFrameCol>
                         
-                        </div>
+                        
                     </StepSec>
                 </Container>
             </>
@@ -69,7 +70,7 @@ const FlexDiv = styled.div`
     display: flex; align-items: center; justify-content: center; flex-wrap: wrap;
 `;
 const Container = styled.div`
-    width:1360px; margin: 0px auto;
+    width:1360px; margin: 0px auto; max-width:100%; padding: 0 20px;
 `
 const BreadCrumbs = styled.div`
     color: #989898; margin-bottom: 50px;

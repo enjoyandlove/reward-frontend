@@ -23,9 +23,12 @@ export default class StakingRewards extends PureComponent {
                     <MainContainer>
                         <Container className="pt-10">
                             <div className='mt-14'>
-                                <div className='font-play text-white-main text-9 md:text-1 text-center'>Last month winner</div>
-                                <div className='text-white-main text-center text-2xl font-bold leading-8 mt-4'>Winning entries</div>
-                                <div className="max-w-2xl mt-[80px] mx-auto">
+                                <div className="wow zoomIn" data-wow-delay="0.1s">
+                                    <div className='font-play text-white-main text-9 md:text-1 text-center'>Last month winner</div>
+                                    <div className='text-white-main text-center text-2xl font-bold 
+                                    leading-8 mt-4'>Winning entries</div>
+                                </div>
+                                <div className="max-w-2xl mt-[80px] mx-auto wow fadeInUp" data-wow-delay="0.3s">
                                     <Table>
                                         <thead>
                                             <tr>
@@ -117,7 +120,7 @@ const FlexDiv = styled.div`
     display: flex; align-items: center; justify-content: center; flex-wrap: wrap;
 `;
 const Container = styled.div`
-    width:1360px; margin: 0px auto;
+    width:1360px; margin: 0px auto;  max-width:100%; padding: 0 20px;
     .border-zinc-900 {border-color: #363636;}
 `
 const Table = styled.table `

@@ -44,32 +44,32 @@ export default class PersonalRewards extends PureComponent {
             <FontAwesomeIcon icon={faAngleRight} className='mx-1' />
             <BreadLinks>Personal rewards</BreadLinks>
           </BreadCrumbs>
-          <div class="font-play text-white-main text-9 md:text-1 text-center">choose a project for personal reward</div>
+          <div class="font-play text-white-main text-9 md:text-1 text-center" data-wow-delay="0.1s">choose a project for personal reward</div>
           <ChooseProject>
-            <ProjectItems className="active"><img src={project1}></img></ProjectItems>
-            <ProjectItems><img src={project2}></img></ProjectItems>
-            <ProjectItems><img src={project3}></img></ProjectItems>
-            <ProjectItems><img src={project4}></img></ProjectItems>
-            <ProjectItems><img src={project5}></img></ProjectItems>
-            <ProjectItems><img src={project6}></img></ProjectItems>
-            <ProjectItems><img src={project7}></img></ProjectItems>
-            <ProjectItems><img src={project8}></img></ProjectItems>
-            <ProjectItems className="disable"><img src={project9}></img></ProjectItems>
-            <ProjectItems className="disable"><img src={project10}></img></ProjectItems>
-            <ProjectItems className="disable"><img src={project11}></img></ProjectItems>
-            <ProjectItems className="disable"><img src={project12}></img></ProjectItems>
-            <ProjectItems className="disable"><img src={project13}></img></ProjectItems>
-            <ProjectItems className="disable"><img src={project14}></img></ProjectItems>
-            <ProjectItems><span>Connect Wallet</span></ProjectItems>
-            <ProjectItems className="disable"><img src={project15}></img></ProjectItems>
-            <ProjectItems className="disable"><img src={project16}></img></ProjectItems>
-            <ProjectItems className="disable"><img src={project17}></img></ProjectItems>
-            <ProjectItems className="disable"><img src={project18}></img></ProjectItems>
-            <ProjectItems className="disable"><img src={project19}></img></ProjectItems>
+            <ProjectItems className="active wow zoomIn"><img src={project1}></img></ProjectItems>
+            <ProjectItems className="wow zoomIn"><img src={project2}></img></ProjectItems>
+            <ProjectItems className="wow zoomIn"><img src={project3}></img></ProjectItems>
+            <ProjectItems className="wow zoomIn"><img src={project4}></img></ProjectItems>
+            <ProjectItems className="wow zoomIn"><img src={project5}></img></ProjectItems>
+            <ProjectItems className="wow zoomIn"><img src={project6}></img></ProjectItems>
+            <ProjectItems className="wow zoomIn"><img src={project7}></img></ProjectItems>
+            <ProjectItems className="wow zoomIn"><img src={project8}></img></ProjectItems>
+            <ProjectItems className="disable wow zoomIn"><img src={project9}></img></ProjectItems>
+            <ProjectItems className="disable wow zoomIn"><img src={project10}></img></ProjectItems>
+            <ProjectItems className="disable wow zoomIn"><img src={project11}></img></ProjectItems>
+            <ProjectItems className="disable wow zoomIn"><img src={project12}></img></ProjectItems>
+            <ProjectItems className="disable wow zoomIn"><img src={project13}></img></ProjectItems>
+            <ProjectItems className="disable wow zoomIn"><img src={project14}></img></ProjectItems>
+            <ProjectItems className="wow zoomIn"><span>Connect Wallet</span></ProjectItems>
+            <ProjectItems className="disable wow zoomIn"><img src={project15}></img></ProjectItems>
+            <ProjectItems className="disable wow zoomIn"><img src={project16}></img></ProjectItems>
+            <ProjectItems className="disable wow zoomIn"><img src={project17}></img></ProjectItems>
+            <ProjectItems className="disable wow zoomIn"><img src={project18}></img></ProjectItems>
+            <ProjectItems className="disable wow zoomIn"><img src={project19}></img></ProjectItems>
           </ChooseProject>
-          <Newsletter>
+          <Newsletter className="wow fadeInUp" data-wow-delay="0.6s">
             <label for="">Let me know when new project become available</label>
-            <input className="email h-[40px] w-[280px] bg-transparent border-2 border-solid" type="email" placeholder="Email address"></input>
+            <input className="email text-white-main h-[40px] w-[280px] bg-transparent border-2 border-solid" type="email" placeholder="Email address"></input>
             <button className="btn-golden w-[120px] h-[40px] bg-yellow-main border-2 border-solid bg-opacity-0 text-white-1 font-bold text-5 font-montserrat">SUBMIT</button>
           </Newsletter>
         </Container>
@@ -82,7 +82,7 @@ const FlexDiv = styled.div`
   display: flex; align-items: center; justify-content: center; flex-wrap: wrap;
 `;
 const Container = styled.div`
-  width:1360px; margin: 0px auto;
+  width:1360px; margin: 0px auto;  max-width:100%; padding: 0 20px;
 `
 const BreadCrumbs = styled.div`
   color: #989898; margin-bottom: 50px;
@@ -96,6 +96,16 @@ const BreadLinks = styled.a`
 
 const ChooseProject = styled.div`
   display: grid; grid-template-columns: repeat(5, 1fr); grid-column-gap: 20px; grid-row-gap: 20px; margin: 40px 0 0;
+  @media screen and (max-width: 1200px) {
+    grid-template-columns: repeat(4, 1fr);
+    img {max-width: 90%;}
+  }
+  @media screen and (max-width: 800px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media screen and (max-width: 600px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `
 const ProjectItems = styled(FlexDiv)`
   height: 120px; border: 1px solid #252525; position: relative;
@@ -116,6 +126,11 @@ const Newsletter = styled.div `
   display: flex; padding: 80px 0; align-items: center; justify-content: center; 
   label {color: #989898; font-size: 12px; margin: 0; margin-right: 20px; }
   .email {margin-right: 10px; border-color: #252525; padding: 0 14px;}
+  @media screen and (max-width: 600px) {
+    flex-flow: column;
+    label {margin-right: 0;}
+    .email {margin: 10px 0;}
+  }
 `
 const StepNav = styled(FlexDiv)`
   font-size: 14px; 

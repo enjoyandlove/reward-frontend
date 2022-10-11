@@ -32,7 +32,7 @@ const AppBar = () => {
                     <div className='flex text-white-main mb-2 md:mb-0'><MiniPad num={num[0]} /> <MiniPad num={num[1]} /> : <MiniPad num={num[2]} /><MiniPad num={num[3]} />:<MiniPad num={num[4]} /><MiniPad num={num[5]} />:<MiniPad num={num[6]} /><MiniPad num={num[7]} /></div>
                     <div className='font-bold text-white-2 font-montserrat text-4 mb-6 md:mb-0 md:ml-5'>Last month winners</div>
                 </div>
-                <button className='header-btn w-[120px] h-[35px] bg-yellow-main border-2 border-solid border-white-2 bg-opacity-0 text-white-2 font-bold text-4 font-montserrat'  onClick={() => setOpen(!isOpen)}>Connect</button>
+                <button className='header-btn w-[120px] h-[35px] bg-yellow-main border-2 border-solid border-white-2 bg-opacity-0 text-white-2 font-bold text-4 font-montserrat' onClick={() => setOpen(!isOpen)}>Connect</button>
             </div>
 
             <PopOverlay className={`${!isOpen ? "collapsed" : "hidden"}`}></PopOverlay>
@@ -46,7 +46,7 @@ const AppBar = () => {
                     </a>
                     <a><span>2.</span>  Connect your social media</a>
                 </PopLink>
-                <div className='grid grid-cols-2 gap-x-8'>
+                <div className='grid grid-cols-2 gap-x-5 md:gap-x-8'>
                     <ul>
                         <li className='active'>Install Binance Chain Wallet <img src={hico4}></img></li>
                         <li>Install MetaMask <img src={hico1}></img></li>
@@ -71,10 +71,20 @@ const PopupBox = styled.div `
     position: fixed;
     top:50%; 
     left:50%; z-index: 200;
-    transform: translate(-50%, -50%); width: 730px;
+    transform: translate(-50%, -50%); width: 730px; max-width: calc(100% - 40px);
     background: #080808; z-index: 100; padding: 74px 33px 28px;
+    @media screen and (max-width:600px) {
+        padding: 54px 20px 10px;
+    }
     ul { 
-        li {color: #fff; height: 63px; width: 100%; font-size: 14px; display: flex; align-items: center; border: 1px solid #262626; padding: 10px 18px; margin-bottom: 19px; justify-content: space-between;
+        li {color: #fff; height: 63px; width: 100%; font-size: 14px; display: flex; align-items: center; border: 1px solid #262626; padding: 10px 18px; margin-bottom: 19px; justify-content: space-between; cursor: pointer;
+            @media screen and (max-width:600px) {
+                padding: 10px 10px;
+                img {margin-left: 5px;}
+            }
+            @media screen and (max-width: 480px) {
+                font-size: 13px; line-height: 1.2;
+            }
             &.active {border-color: #e9a134;}
         }
     }
@@ -84,8 +94,15 @@ const PopLink = styled.div `
     a {color: #fff; width: 50%; text-align: center; border-bottom: 3px solid #262626; padding-bottom: 22px; font-size: 16px; font-weight: bold;
         &.active {border-bottom: 3px solid #e9a134; color: #e9a134;}
     }
+    @media screen and (max-width:600px) {
+        flex-flow: column; margin-bottom: 10px;
+        a {width: 100%; padding-bottom: 6px; margin-bottom: 15px; }
+    }
 `
 const Close = styled.div `
     position: absolute; top: 24px; right: 28px; cursor: pointer;
+    @media screen and (max-width:600px) {
+        right: 20px; top: 20px;
+    }
 `
 export default AppBar;

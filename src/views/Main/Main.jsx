@@ -22,77 +22,77 @@ const Main = () => {
     
     return (
         <MainLayout>
-            <div className='px-5 md:px-56 mt-5'>
+            <div className='px-5 md:px-56 mt-5 smeTitle01 wow fadeInUp' data-wow-delay="0.1s">
                 <div className='font-play text-white-main text-9 md:text-1 text-center'>welcome to The Qonetum Finance reward program</div>
                 <div className='text-center font-montserrat mt-2'>
                     <p className='text-white-main text-2 font-normal'>dVoucher Reward System</p>
                     <p className='text-white-2 text-8 mt-7 leading-8'>dVoucher tokens are NFT reward tokens that can be exchanged for any Qonetum Finance project tokens with the same $:$ face value through a router. The dVoucher reward NFT tokens can be traded on NFT marketplaces. Once dVoucher rewards are exchanged for project tokens, the newly received tokens are placed behind the Dumper Shield in a second position behind original project investors.</p>
                 </div>
             </div>
-                <div className='main-bg'>
-                    <div className='px-5 md:px-56'>
-                        <p className='text-center text-white-main font-montserrat font-bold text-2 mt-14'>All the dVoucher tokens are serving also as a lottery tickets in the jackpot</p>
+            <div className='main-bg'>
+                <div className='px-5 md:px-56 wow fadeInUp' data-wow-delay="0.4s">
+                    <p className='text-center text-white-main font-montserrat font-bold text-2 mt-14'>All the dVoucher tokens are serving also as a lottery tickets in the jackpot</p>
+                </div>
+                <div className='relative'>
+                    <div className="md:flex justify-center relative mb-5">
+                        <div className='w-full md:w-auto wow zoomIn' data-wow-delay="0.2s">
+                            <img src={jackpot} alt='jackpot' />
+                        </div>
+                        <div className="table md:absolute md:block bottom-1/2 md:translate-y-1/2 right-0 round-rec rounded-[10px] md:rounded-r-[0] mx-auto">
+                            <div className='flex items-center p-1'>
+                                <FontAwesomeIcon icon={faCaretRight} className='mx-1' />
+                                <img className="fire-img" width='50' src={layer2589} alt='fire'  />
+                                <p className='mx-2 text-6 text-white-main leading-[18px] font-bold font-montserrat'>Hurry, investors gain 1,458,586<br />lottery tickets for this month</p>
+                            </div>
+                        </div>
                     </div>
-                    <div className='relative'>
-                        <div className="md:flex justify-center relative mb-5">
-                            <div className='w-full md:w-auto'>
-                                <img src={jackpot} alt='jackpot' />
-                            </div>
-                            <div className="table md:absolute md:block bottom-1/2 md:translate-y-1/2 right-0 round-rec rounded-[10px] md:rounded-r-[0] mx-auto">
-                                <div className='flex items-center p-1'>
-                                    <FontAwesomeIcon icon={faCaretRight} className='mx-1' />
-                                    <img className="fire-img" width='50' src={layer2589} alt='fire'  />
-                                    <p className='mx-2 text-6 text-white-main leading-[18px] font-bold font-montserrat'>Hurry, investors gain 1,458,586<br />lottery tickets for this month</p>
-                                </div>
-                            </div>
+                    <p className='md:absolute text-center bottom-0 right-1/2 md:translate-x-1/2 text-white-main font-bold font-montserrat text-2 mt-2'>Total dVoucher</p>
+                </div>
+                <div className='px-5 md:px-56'>
+                    <div>
+                        <div className='flex justify-center items-end mt-7 wow bounce' delay="0.4">
+                            <BigPad num={num[0]} />
+                            <BigPad num={num[1]} />
+                            <p className='mx-2 text-2 md:text-7 font-play text-yellow-main leading-13'>,</p>
+                            <BigPad num={num[2]} />
+                            <BigPad num={num[3]} />
+                            <BigPad num={num[4]} />
+                            <p className='mx-2 text-2 md:text-7 font-play text-yellow-main leading-13'>,</p>
+                            <BigPad num={num[5]} />
+                            <BigPad num={num[6]} />
+                            <BigPad num={num[7]} />
                         </div>
-                        <p className='md:absolute text-center bottom-0 right-1/2 md:translate-x-1/2 text-white-main font-bold font-montserrat text-2 mt-2'>Total dVoucher</p>
+                        <p className='text-4 leading-2 font-montserrat text-white-2 text-center mt-5'><span className='font-bold text-white-main'>30</span> days : <span className='font-bold text-white-main'>22</span> hours : <span className='font-bold text-white-main'>09</span> minutes : <span className='font-bold text-white-main'>12</span> seconds
+                            {/* <span className='text-yellow-main'>Check your lottery reward</span> */}
+                        </p>
                     </div>
-                    <div className='px-5 md:px-56'>
-                        <div>
-                            <div className='flex justify-center items-end mt-7'>
-                                <BigPad num={num[0]} />
-                                <BigPad num={num[1]} />
-                                <p className='mx-2 text-2 md:text-7 font-play text-yellow-main leading-13'>,</p>
-                                <BigPad num={num[2]} />
-                                <BigPad num={num[3]} />
-                                <BigPad num={num[4]} />
-                                <p className='mx-2 text-2 md:text-7 font-play text-yellow-main leading-13'>,</p>
-                                <BigPad num={num[5]} />
-                                <BigPad num={num[6]} />
-                                <BigPad num={num[7]} />
-                            </div>
-                            <p className='text-4 leading-2 font-montserrat text-white-2 text-center mt-5'><span className='font-bold text-white-main'>30</span> days : <span className='font-bold text-white-main'>22</span> hours : <span className='font-bold text-white-main'>09</span> minutes : <span className='font-bold text-white-main'>12</span> seconds
-                                {/* <span className='text-yellow-main'>Check your lottery reward</span> */}
-                            </p>
+                    <div className='mt-14 '>
+                        <p className='text-2 leading-[36px] text-white-2 font-montserrat text-center mb-8 md:mb-12'>Choose how do you want to gain your dVouchers</p>
+                        <div className='grid gap-7 grid-cols-1 md:grid-cols-2 lg:grid-cols-4'>
+                            <RewardCard delay='0.3s' image='reward1' compensation='Up to $250,000 a month' title='Personal rewards' />
+                            <RewardCard delay='0.4s' image='reward2' compensation='Up to $200,000 a month' title='Group rewards' />
+                            <RewardCard delay='0.5s' image='reward3' compensation='Up to $250,000 a month' title='Competition' />
+                            <RewardCard delay='0.6s' image='reward4' compensation='Up to $250,000 a month' title='Social engagement' />
+                            <RewardCard delay='0.7s' image='reward5' compensation='Unlimited dVouchers' title='Referral program' />
+                            <RewardCard delay='0.8s' image='reward6' compensation='Unlimited dVouchers' title='Staking reward' />
+                            <RewardCard delay='0.9s' image='reward7' compensation='Unlimited dVouchers' title='Trading rewards' />
+                            <RewardCard delay='1s' image='reward8' compensation='Unlimited dVouchers ' title='Dead tokens recovery' />
                         </div>
-                        <div className='mt-14 '>
-                            <p className='text-2 leading-[36px] text-white-2 font-montserrat text-center mb-8 md:mb-12'>Choose how do you want to gain your dVouchers</p>
-                            <div className='grid gap-7 grid-cols-1 md:grid-cols-2 lg:grid-cols-4'>
-                                <RewardCard image='reward1' compensation='Up to $250,000 a month' title='Personal rewards' />
-                                <RewardCard image='reward2' compensation='Up to $200,000 a month' title='Group rewards' />
-                                <RewardCard image='reward3' compensation='Up to $250,000 a month' title='Competition' />
-                                <RewardCard image='reward4' compensation='Up to $250,000 a month' title='Social engagement' />
-                                <RewardCard image='reward5' compensation='Unlimited dVouchers' title='Referral program' />
-                                <RewardCard image='reward6' compensation='Unlimited dVouchers' title='Staking reward' />
-                                <RewardCard image='reward7' compensation='Unlimited dVouchers' title='Trading rewards' />
-                                <RewardCard image='reward8' compensation='Unlimited dVouchers ' title='Dead tokens recovery' />
-                            </div>
-                            <hr className='mt-16 border-white-3' />
-                        </div>
+                        <hr className='mt-16 border-white-3' />
                     </div>
                 </div>
+            </div>
             
             <div className='mt-12 px-5 md:px-56'>
                 <p className='text-2 leading-[36px] text-white-2 font-montserrat text-center mb-8 md:mb-12'>Types of dVouchers</p>
                 <div className='grid gap-7 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
-                    <DvoucherCard image='dvoucher1' compensation='Bronze Value of $1' title='Bronze lottery reward' />
-                    <DvoucherCard image='dvoucher2' compensation='Silver Value of $10' title='Silver lottery reward' />
-                    <DvoucherCard image='dvoucher3' compensation='Gold Value of $100' title='Gold lottery reward' />
-                    <DvoucherCard image='dvoucher4' compensation='Platinum Value of $1000' title='Platinum lottery reward' />
+                    <DvoucherCard delay='1' image='dvoucher1' compensation='Bronze Value of $1' title='Bronze lottery reward' />
+                    <DvoucherCard delay='2' image='dvoucher2' compensation='Silver Value of $10' title='Silver lottery reward' />
+                    <DvoucherCard delay='3' image='dvoucher3' compensation='Gold Value of $100' title='Gold lottery reward' />
+                    <DvoucherCard delay='4' image='dvoucher4' compensation='Platinum Value of $1000' title='Platinum lottery reward' />
                 </div>
             </div>
-            <div className='mt-16 px-5 md:px-56'>
+            <div className='mt-16 px-5 md:px-56 wow fadeInRight' data-wow-delay="0.1s">
                 <div className={`accordion-title flex justify-between text-white-main items-center ${isOpen6 ? "open" : ""}`} onClick={() => setOpen6(!isOpen6)}>
                     <p className='uppercase text-9 leading-[42px] font-play'>How does it's works?</p>
                     <FontAwesomeIcon icon={faCaretUp} />
@@ -113,7 +113,7 @@ const Main = () => {
                     </div>
                 </div>
             </div>
-            <div className='mt-16 px-5 md:px-56'>
+            <div className='mt-16 px-5 md:px-56 wow fadeInRight' data-wow-delay="0.1s">
                 <div className={`accordion-title flex justify-between text-white-main items-center ${isOpen ? "open" : ""}`} onClick={() => setOpen(!isOpen)}>
                     <p className='uppercase text-9 leading-[42px] font-play'>Limited dVoucher rewards per month</p> 
                     <FontAwesomeIcon icon={faCaretUp} />
@@ -163,7 +163,7 @@ const Main = () => {
                     </table>
                 </div>
             </div>
-            <div className='mt-16 px-5 md:px-56'>
+            <div className='mt-16 px-5 md:px-56 wow fadeInRight' data-wow-delay="0.1s">
                 <div className={`accordion-title flex justify-between text-white-main items-center ${isOpen2 ? "open" : ""}`} onClick={() => setOpen2(!isOpen2)}>
                     <p className='uppercase text-9 leading-[42px] font-play'>Unlimited dVoucher rewards</p>
                     <FontAwesomeIcon icon={faCaretUp} />
@@ -202,7 +202,7 @@ const Main = () => {
                     </table>
                 </div>
             </div>
-            <div className='mt-16 px-5 md:px-56'>
+            <div className='mt-16 px-5 md:px-56 wow fadeInRight' data-wow-delay="0.1s">
                 <div className={`accordion-title flex justify-between text-white-main items-center ${isOpen3 ? "open" : ""}`} onClick={() => setOpen3(!isOpen3)}>
                     <p className='uppercase text-9 leading-[42px] font-play'>How the Lottery Jackpot works ?</p>
                     <FontAwesomeIcon icon={faCaretUp} />
@@ -211,7 +211,7 @@ const Main = () => {
                     <p className='text-8, leading-[30px] text-white-2 font-montserrat my-10'>The Lottery Jackpot encourages ongoing activity and engagement by our community. The Jackpot restarts monthly. dVouchers generate a Lottery entry once, at the time they are awarded. </p>
                 </div>
             </div>
-            <div className='mt-16 px-5 md:px-56'>
+            <div className='mt-16 px-5 md:px-56 wow fadeInRight' data-wow-delay="0.1s">
                 <div className={`accordion-title flex justify-between text-white-main items-center ${isOpen4 ? "open" : ""}`} onClick={() => setOpen4(!isOpen4)}>
                     <p className='uppercase text-9 leading-[42px] font-play'>Lottery Payout Calculation per class</p>
                     <FontAwesomeIcon icon={faCaretUp} />
@@ -243,7 +243,7 @@ const Main = () => {
                     </table>
                 </div>
             </div>
-            <div className='mt-16 mb-32 px-5 md:px-56'>
+            <div className='mt-16 mb-32 px-5 md:px-56 wow fadeInRight' data-wow-delay="0.1s">
                 <div className={`accordion-title flex justify-between text-white-main items-center ${isOpen5 ? "open" : ""}`} onClick={() => setOpen5(!isOpen5)}>
                     <p className='uppercase text-9 leading-[42px] font-play'>Meta lottery</p>
                     <FontAwesomeIcon icon={faCaretUp} />

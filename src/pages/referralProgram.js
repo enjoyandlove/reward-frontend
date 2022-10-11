@@ -27,12 +27,12 @@ export default class ReferralProgram extends PureComponent {
                     
                     <StepSec>
                         <div className="">
-                            <div className='font-play text-white-main text-9 md:text-1 text-center'>Referral program</div>
-                            <div className='text-center font-montserrat mt-2'>
+                            <div className='font-play text-white-main text-9 md:text-1 text-center wow fadeInUp' data-wow-delay="0.1s">Referral program</div>
+                            <div className='text-center font-montserrat mt-2 wow fadeInUp' data-wow-delay="0.3s">
                                 <p className='text-white-2 text-8 mt-7 leading-8'>The referral program reward is an unlimited dVoucher program, encouraging sharing Qonetum Finance with friends. When new users access Qonetum Finance through a referral link they need to complete personal tasks for the reward to be distributed. Referrers are rewarded with an equal amount of dVouchers that the referral receives through completing all Personal Limited dVouchers Reward. So there is incentive to help referrals complete as many tasks as possible. </p>
                                 <p className='text-white-2 text-8 mt-7 leading-8'>Referral program is limited to the Personal Limited dVouchers Reward program.</p>
                             </div>
-                            <div className="max-w-2xl mt-14 mx-auto">
+                            <div className='max-w-2xl mt-14 mx-auto wow fadeInUp' data-wow-delay="0.5s">
                                 <Table>
                                     <thead>
                                         <tr>
@@ -119,7 +119,7 @@ const FlexDiv = styled.div`
     display: flex; align-items: center; justify-content: center; flex-wrap: wrap;
 `;
 const Container = styled.div`
-    width:1360px; margin: 0px auto;
+    width:1360px; margin: 0px auto;  max-width:100%; padding: 0 20px;
 `
 const BreadCrumbs = styled.div`
     color: #989898; margin-bottom: 50px;

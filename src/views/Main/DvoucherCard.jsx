@@ -10,12 +10,12 @@ import atom4 from '../../assets/atom4.png';
 
 const DvoucherCard = (props) => {
 
-    const { image, compensation, title } = props;
+    const { image, compensation, title, delay } = props;
     return (
         <>
             <div>
                 {image == 'dvoucher1' &&
-                    <div className='typeOfV bronze'>
+                    <div className='typeOfV bronze wow fadeInUp' data-wow-delay={`0.${delay}s`}>
                         <div className='flex py-4 pr-12 mb-2 h-[120px] items-center border-2 border-solid border-white-3'>
                             <div className='px-4 relative'>
                                 <div><img src={dvoucher1} alt='dvoucher' /></div>
@@ -27,7 +27,7 @@ const DvoucherCard = (props) => {
                     </div>
                 }
                 {image == 'dvoucher2' &&
-                    <div className='typeOfV silver'>
+                    <div className='typeOfV silver wow fadeInUp' data-wow-delay={`0.${delay}s`}>
                         <div className='flex py-4 pr-12 mb-2 h-[120px] items-center border-2 border-solid border-white-3'>
                             <div className='px-4 relative'>
                                 <div><img src={dvoucher2} alt='dvoucher' /></div>
@@ -39,7 +39,7 @@ const DvoucherCard = (props) => {
                     </div>
                 }
                 {image == 'dvoucher3' &&
-                    <div className='typeOfV gold'>
+                    <div className='typeOfV gold wow fadeInUp' data-wow-delay={`0.${delay}s`}>
                         <div className='flex py-4 pr-12 mb-2 h-[120px] items-center border-2 border-solid border-white-3'>
                             <div className='px-4 relative'>
                                 <div><img src={dvoucher3} alt='dvoucher' /></div>
@@ -51,7 +51,7 @@ const DvoucherCard = (props) => {
                     </div>
                 }
                 {image == 'dvoucher4' &&
-                    <div className='typeOfV platinum'>
+                    <div className='typeOfV platinum wow fadeInUp' data-wow-delay={`0.${delay}s`}>
                         <div className='flex py-4 pr-12 mb-2 h-[120px] items-center border-2 border-solid border-white-3'>
                             <div className='px-4 relative'>
                                 <div><img src={dvoucher4} alt='dvoucher' /></div>

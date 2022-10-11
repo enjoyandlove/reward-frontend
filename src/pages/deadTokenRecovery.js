@@ -24,23 +24,23 @@ export default class DeadTokenRecovery extends PureComponent {
                         <BreadLinks>PDO finance</BreadLinks>
                     </BreadCrumbs>
                     <div className='mt-14'>
-                        <div className='font-play text-white-main text-4xl md:text-1 text-center'>Dead token recovery</div>
-                        <div className='text-center font-montserrat mt-2'>
+                        <div className='font-play text-white-main text-4xl md:text-1 text-center wow fadeInUp' data-wow-delay="0.1s">Dead token recovery</div>
+                        <div className='text-center font-montserrat mt-2 wow fadeInUp' data-wow-delay="0.2s">
                             <p className='text-white-2 text-8 mt-7 leading-8'>When cryptocurrency projects fail, they likely suffered from heavy sale pressure that overpowered demand. Qonetum Finance consistently develops unique solutions designed to reduce project failure rate and provide projects a chance to recover. In order to start recovery, sell pressure must be lessened.  </p>
                             <p className='text-white-2 text-8 mt-7 mb-14 leading-8'>The dead token recovery program is a not-for-profit solution designed by Qonetum Finance within the unlimited dVoucher reward program, to help investors holding dead tokens that want to have the chance to recover losses. </p>
                         </div>
                         <CounterMain>
-                            <div className="w-1/2 border-r border-solid border-zinc-800">
+                            <div className="md:w-1/2 md:border-r border-solid border-zinc-800 wow fadeInLeft" data-wow-delay="0.3s">
                                 <p className="text-white-main text-center text-2xl font-bold leading-8 mb-6">Total projects under recovery </p>
                                 <h3 className="text-yellow-600 font-play text-white-main text-9 md:text-5xl text-center">126</h3>
                             </div>
-                            <div className="w-1/2 relative">
+                            <div className="md:w-1/2 relative mt-4 md:mt-0 wow fadeInRight" data-wow-delay="0.3s">
                                 <p className="text-white-main text-center text-2xl font-bold leading-8 mb-6">Total token remove from circulations</p>
                                 <h3 className="text-yellow-600 font-play text-white-main text-9 md:text-5xl text-center">1,548,665,856.456</h3>
                             </div>
                         </CounterMain>
-                        <div className='font-play text-white-main text-9 md:text-3xl mt-[70px] mb-5'>Recovery process</div>
-                        <ol className="text-white-2 list-decimal pl-7 text-lg">
+                        <div className='font-play text-white-main text-9 md:text-3xl mt-[70px] mb-5 wow fadeInUp' data-wow-delay="0.6s">Recovery process</div>
+                        <ol className="text-white-2 list-decimal pl-7 text-lg wow fadeInLeft" data-wow-delay="0.8s">
                             <li className="mb-3">Investors need to submit and lock dead tokens under the Dumper Shield for 3 years.</li>
                             <li className="mb-3">For each locked token Investors are eligible to buy 1 dVoucher token at a 100:1 token to token ratio.</li>
                             <li className="mb-3">Once eligible purchases are made, dVoucher sends as an NFT to investor wallets which can be traded on marketplaces.</li>
@@ -60,32 +60,32 @@ export default class DeadTokenRecovery extends PureComponent {
                         </ol>
                     </div>
                     <hr className="my-14 border-zinc-900"></hr>
-                    <div class="font-play text-white-main text-1 md:text-4xl text-center mb-12">recover your dead tokens</div>
-                    <Form className="text-white-main">
-                        <div className="grid grid-cols-2">
-                            <div className="px-3 mb-5">
+                    <div class="font-play text-white-main text-9 md:text-4xl text-center mb-12 wow fadeInUp" data-wow-delay="0.3s">recover your dead tokens</div>
+                    <Form className="text-white-main wow zoomIn" data-wow-delay="0.5s">
+                        <div className="grid md:grid-cols-2">
+                            <div className="md:px-3 mb-5">
                                 <label className="text-lg font-bold mb-3 block">Choose a network</label>
                                 <button className="px-6 text-lg w-full h-[67px] bg-transparent border-2 border-current border-zinc-900 text-left flex items-center"><img className="mr-5" src={ico1}></img>BSC <i class="fa fa-caret-down ml-auto"></i></button>
                             </div>
-                            <div className="px-3 mb-5"> 
+                            <div className="md:px-3 mb-5"> 
                                 <label className="text-lg font-bold mb-3 block">Choose token</label>
                                 <button className="px-6 text-lg w-full h-[67px] bg-transparent border-2 border-current border-zinc-900 text-left flex items-center"><img className="mr-5" src={ico2}></img>XYZ <i class="fa fa-caret-down ml-auto"></i></button>
                                 <p>Smart contract <a>0x5DC53496E8dd50887785d75D432cBa6A86F82cad<i class="fas fa-external-link-alt ml-1"></i></a></p>
                             </div>
-                            <div className="px-3 mb-5">
+                            <div className="md:px-3 mb-5">
                                 <label className="text-lg font-bold mb-3 block">Select amount of tokens to shield <sup className="help-circle">
                                 <i className="fas fa-question-circle protip" data-pt-position="top" data-pt-title="The slippage option finds the best price in the market with a slippage limit option under your trade options" aria-hidden="true"
                                 ></i></sup> </label>
                                 <input className="px-6 w-full h-[67px] bg-transparent border-2 border-current border-zinc-900" type="text"></input>
                                 <p className="ml-auto">Balance <span>10,000,000 XYZ</span>  |  MAX</p>
                             </div>
-                            <div className="px-3 mb-5">
+                            <div className="md:px-3 mb-5">
                                 <label className="text-lg font-bold mb-3 block">Buy dVoucher </label>
                                 <input className="px-6 w-full h-[67px] bg-transparent border-2 border-current border-zinc-900" type="text"></input>
                                 <p className="">Eligible to buy: <span>1,545,653 dVoucher</span> |  MAX</p>     
                             </div>
                         </div>
-                        <div className="grid grid-cols-1 px-3">
+                        <div className="grid grid-cols-1 md:px-3">
                             <label className="text-lg font-bold mb-3 block">Deposit security <sup className="help-circle">
                             <i className="fas fa-question-circle protip" data-pt-position="top" data-pt-title="The slippage option finds the best price in the market with a slippage limit option under your trade options" aria-hidden="true"
                             ></i></sup></label>
@@ -99,8 +99,8 @@ export default class DeadTokenRecovery extends PureComponent {
                             <button className="btn-golden shadow-lg w-[660px] h-[80px] mt-6 bg-yellow-main border-2 border-solid bg-opacity-0 text-white-1 font-bold text-xl uppercase">RECOVER YOUR DEAD TOKEN</button>
                         </div>
                     </Form>
-                    <h3 className="text-white-main text-2xl font-bold leading-8 mb-10">History</h3>
-                    <ul className="border-t-[1px] border-solid border-zinc-900">
+                    <h3 className="text-white-main text-2xl font-bold leading-8 mb-10 wow fadeInRight" data-wow-delay="0.7s">History</h3>
+                    <ul className="border-t-[1px] border-solid border-zinc-900 wow fadeInRight" data-wow-delay="0.7s">
                         <li className="flex py-3 text-white-2 border-b-[1px] border-solid border-zinc-800">Total tokens sent to the dumper shield 
                         <span className="ml-auto">100,000</span></li>
                         <li className="flex py-3 text-white-2 border-b-[1px] border-solid border-zinc-800">Your eligible dVouchers 
@@ -120,7 +120,7 @@ const FlexDiv = styled.div`
     display: flex; align-items: center; justify-content: center; flex-wrap: wrap;
 `;
 const Container = styled.div`
-    width:1360px; margin: 0px auto;
+    width:1360px; margin: 0px auto;  max-width:100%; padding: 0 20px;
     .border-zinc-900 {border-color: #363636;}
 `
 const BreadCrumbs = styled.div`
@@ -135,6 +135,12 @@ const BreadLinks = styled.a`
 
 const CounterMain = styled.div`
     display: flex; align-items: center; justify-content: center; margin-top: 30px;
+    @media screen and (max-width: 1000px) {
+        flex-flow: column;
+    }
+    @media screen and (max-width: 600px) {
+        overflow: hidden; zoom: 90%;
+    }
 `
 const Rvoucher = styled(FlexDiv) `
     font-size:38px; font-weight:400; font-family: "Mandatory Plaything"; color: #fff; line-height: 62px; margin: 19px 0 0 0; padding: 0 52px; flex-flow: row;
