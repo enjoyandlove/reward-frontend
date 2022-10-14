@@ -26,9 +26,9 @@ const WalletConnect = () => {
     if (active) {
       const perform = async () => {
         const pending = await getDvoucherPending(account)
-        setDvoucherPending(pending)
+        pending ? setDvoucherPending(pending) : setDvoucherPending(0)
         const balance = await getDvoucherBalance(account)
-        setDvoucherBalance(balance)
+        balance ? setDvoucherBalance(balance) : setDvoucherBalance(0)
       }
       perform()
 
