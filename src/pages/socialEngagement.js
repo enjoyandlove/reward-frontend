@@ -32,7 +32,7 @@ import project19 from './../assets/rewards/project19.png'
 
 
 
-const DeadTokenRecovery = () => {
+const SocialEngagement = () => {
   const navigate = useNavigate()
 
   return (
@@ -41,11 +41,11 @@ const DeadTokenRecovery = () => {
         <BreadCrumbs>
           <BreadLinks href="/">Main page</BreadLinks>
           <FontAwesomeIcon icon={faAngleRight} className='mx-1' />
-          <BreadLinks href="/rewards/dead-token-recovery">Dead token recovery</BreadLinks>
+          <BreadLinks href="/rewards/social-engagement">Social Engagement</BreadLinks>
         </BreadCrumbs>
-        <div class="font-play text-white-main text-9 md:text-1 text-center" data-wow-delay="0.1s">choose a project for Dead token recovery</div>
+        <div class="font-play text-white-main text-9 md:text-1 text-center" data-wow-delay="0.1s">choose a project for social engagement</div>
         <ChooseProject>
-          <ProjectItems onClick={() => { navigate('/rewards/dead-token-recovery-pdo') }} className="wow zoomIn"><img src={project1}></img></ProjectItems>
+          <ProjectItems onClick={() => { navigate('/rewards/social-engagement-pdo') }} className="wow zoomIn"><img src={project1}></img></ProjectItems>
           <ProjectItems className="wow zoomIn"><img src={project2}></img></ProjectItems>
           <ProjectItems className="wow zoomIn"><img src={project3}></img></ProjectItems>
           <ProjectItems className="wow zoomIn"><img src={project4}></img></ProjectItems>
@@ -75,7 +75,7 @@ const DeadTokenRecovery = () => {
     </>
   );
 }
-export default DeadTokenRecovery
+export default SocialEngagement
 
 const FlexDiv = styled.div`
   display: flex; align-items: center; justify-content: center; flex-wrap: wrap;

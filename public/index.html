@@ -25,7 +25,7 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
-
+    <link rel="stylesheet" type="text/css" href="%PUBLIC_URL%/css/animate.css" />
     <link rel="stylesheet" type="text/css" href="%PUBLIC_URL%/css/protip.min02.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
   integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
@@ -46,6 +46,9 @@
   </body>
   <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
   <script src="%PUBLIC_URL%/js/protip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+  integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+  crossorigin="anonymous"></script>
 
   <script>
     $(".protipNp").each(function () {
@@ -54,5 +57,20 @@
       $(this).append(html);
     });
     $.protip();
+
+    wow = new WOW({
+      boxClass: "wow", // default
+      animateClass: "animated", // default
+      offset: 0, // default
+      mobile: true, // default
+      live: true, // default
+    });
+    wow.init();
+    $(".qr-Scan").hover(function (e) {
+      e.preventDefault();
+      $(".qr-boxPopup").fadeIn(300, function () {
+        $(this).focus();
+      });
+    });
   </script>
 </html>

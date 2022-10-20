@@ -10,10 +10,14 @@ export const sortAddress = (add) => {
 };
 
 export const getDvoucherPending = async (address) => {
-  let pending
+  let pending = 0
   await axios.get(`https://rewardslist.herokuapp.com/jackpot/${address}`).then((res) => {
     if (res.status != 200) return;
-    pending = res.data.value
+    pending += res.data.value
+  })
+  await axios.get(`https://rewardslist.herokuapp.com/jackpot/noncomp/${address}`).then((res) => {
+    if (res.status != 200) return;
+    pending += res.data.value
   })
   return pending
 }
@@ -24,13 +28,26 @@ export const getDvoucherBalance = async (address) => {
   const dvoucher = new ethers.Contract(
     process.env.REACT_APP_DVOUCHER_ADDRESS,
     abi
-  );
+    );
   dvoucher.functions.balanceOf(address).then((res) => {
-    if (res.status != 200) return;
+    if (res.status != 200) { return;}
     balance = res.data
   })
   return balance
 }
+// export const getNominalCount = async (nominal) => {
+//   let balance
+//   const abi = DVoucherNFT.abi
+//   const dvoucher = new ethers.Contract(
+//     process.env.REACT_APP_DVOUCHER_ADDRESS,
+//     abi
+//   );
+//   dvoucher.functions.nominalCount(nominal).then((res) => {
+//     if (res.status != 200) return;
+//     balance = res.data
+//   }) 
+//   return balance
+// }
 
 export const claimRewards = async (amount, address) => {
   const abi = DVoucherMinter.abi

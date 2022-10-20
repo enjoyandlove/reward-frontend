@@ -69,14 +69,14 @@ const WalletConnect = () => {
         {active ? (
           <div className='flex items-center'>
             <p className='text-4 text-white-2 font-montserrat'>dVouchers pending:<span><FontAwesomeIcon icon={faQuestionCircle} /></span><span className='text-white-main font-bold pl-2'>${dvoucherPending}</span></p>
-            <button className='w-[120px] h-[35px] border-2 border-solid border-yellow-main text-yellow-main text-4 font-montserrat font-bold ml-4' onClick={handleClaim}>CLAIM</button>
+            <button className='btn-gold w-[120px] h-[35px] border-2 border-solid border-yellow-main text-yellow-main text-4 font-montserrat font-bold ml-4' onClick={handleClaim}>CLAIM</button>
             <div className='text-white-8 text-4 font-montserrat mx-4'>|</div>
             <p className='text-4 text-white-2 font-montserrat'>dVoucher balance: <span className='font-bold text-yellow-main'>{dvoucherBalance}</span></p>
             <div className='text-white-8 text-4 font-montserrat mx-4'>|</div>
             <p className='font-bold text-white-main text-4 font-montserrat'>0x{sortAddress(account)}</p>
           </div>
         ) : (
-          <button className='header-btn w-[120px] h-[35px] bg-yellow-main border-2 border-solid border-white-2 bg-opacity-0 text-white-2 font-bold text-4 font-montserrat' onClick={() => setIsModalOpened(true)}>Connect</button>
+          <button className='header-btn w-[120px] h-[35px] bg-yellow-main border-2 border-solid border-white-2 bg-opacity-0 text-white-2 font-bold text-4 font-montserrat btn-gold' onClick={() => setIsModalOpened(true)}>Connect</button>
         )}
         <Modal
           closeOnOuterClick={true}
